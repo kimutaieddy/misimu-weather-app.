@@ -9,6 +9,13 @@
 </head>
 <body>
     <h1>Weather Information</h1>
+    <!-- In your HTML template -->
+
+<form method="GET" action="{% url 'search' %}">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+</form>
+
     <ul>
         {% for location in locations %}
             <li>{{ location.name }}</li>
